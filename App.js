@@ -3,10 +3,11 @@ import { View, Alert, ActivityIndicator } from "react-native";
 import styles from "./App.styles";
 import ImageMultipleChoiceQuestion from "./src/components/ImageMultipleChoiceQuestion/ImageMultipleChoiceQuestion";
 import Header from "./src/components/Header";
+import FillInTheBlank from "./src/components/FillInTheBlank";
 
-import questions from "./assets/data/ImageMultipleChoiceQuestion";
+
+import questions from "./assets/data/allQuestions";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-// import FillInTheBlank from "./src/components/FillInTheBlank";
 
 export default function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -94,28 +95,28 @@ export default function App() {
         lives={lives}
       />
 
-      {/* {currentQuestion.type === "FILL_IN_THE_BLANK" && (
+      {currentQuestion.type === "FILL_IN_THE_BLANK" && (
         <FillInTheBlank
           question={currentQuestion}
           onCorrect={onCorrect}
           onWrong={onWrong}
         />
-      )} */}
+      )}
 
-      {/* {currentQuestion.type === "IMAGE_MULTIPLE_CHOICE" && ( */}
+      {currentQuestion.type === "IMAGE_MULTIPLE_CHOICE" && (
       <ImageMultipleChoiceQuestion
         question={currentQuestion}
         onCorrect={onCorrect}
         onWrong={onWrong}
       />
-      {/* )} */}
-      {/* {currentQuestion.type === "OPEN_ENDED" ? (
+      )}
+      {currentQuestion.type === "OPEN_ENDED" ? (
         <OpenEndedQuestion
           question={currentQuestion}
           onCorrect={onCorrect}
           onWrong={onWrong}
         />
-      ) : null} */}
+      ) : null}
     </View>
   );
 }
