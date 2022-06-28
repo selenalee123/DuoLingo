@@ -1,4 +1,2 @@
 
-![](src/assets/Demogithub/Demo1.gif)
-![](assets/demo/mutliple choice.gif)
-
+https://github.com/selenalee123/DuoLingo/blob/main/assets/demo/mutliple%20choice.gif
