@@ -4,23 +4,37 @@ export default [
     type: "FILL_IN_THE_BLANK",
     parts: [
       {
-        text: "la",
+        id: "1",
+        text: "Hola,",
         isBlank: true,
       },
       {
-        text: "nino",
+        id: "2",
+        text: "me",
         isBlank: true,
       },
       {
-        text: "el",
+        id: "3",
+        text: "llamo",
         isBlank: true,
       },
       {
-        text: "nina",
+        id: "4",
+        text: "Kim",
+        isBlank: true,
+      },
+      {
+        id: "5",
+        text: "¿Cómo",
+        isBlank: true,
+      },
+      {
+        id: "6",
+        text: "estás?",
         isBlank: true,
       },
     ],
-    options: ["la", "el", "nina", "nino", "ella"],
+    options: [ "Kim", "me", "estás?","Hola,", "llamo", "¿Cómo"],
   },
   {
     id: "q1",
@@ -57,8 +71,8 @@ export default [
   {
     id: "q2",
     type: "OPEN_ENDED",
-    text: "Yo soy un hombre",
-    answer: "I am a man",
+    text: "¿Como estas",
+    answer: "How are you",
   },
   {
     id: "q3",
@@ -96,8 +110,8 @@ export default [
     id: "q4",
     type: "IMAGE_MULTIPLE_CHOICE",
     type: "OPEN_ENDED",
-    text: "La mujer",
-    answer: "the woman",
+    text: "Adios ",
+    answer: "Bye",
   },
   {
     id: "q3",

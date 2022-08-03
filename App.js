@@ -45,6 +45,8 @@ const App = () => {
     setLives(5);
     setCurrentQuestionIndex(0);
   };
+  
+  const livesDeduction =  lives >= 0 ? lives-1 : 0
 
   const onWrong = () => {
     if (lives <= 1) {
@@ -55,7 +57,7 @@ const App = () => {
         },
       ]);
     } else {
-      Alert.alert("Wroooong");
+      Alert.alert("Try again", "You have " + livesDeduction + " lives left");
       setLives(lives - 1);
     }
   };
