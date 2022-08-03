@@ -78,8 +78,9 @@ const FillInTheBlank = ({ question, onCorrect, onWrong }) => {
       </View>
 
       <View style={styles.optionsContainer}>
-        {question.options.map((option) => (
+        {question.options.map((option,index) => (
           <WordOption
+          key={index}
             text={option}
             isSelected={isSelected(option)}
             onPress={() => addOptionToSelected(option)}
