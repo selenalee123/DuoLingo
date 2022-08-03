@@ -1,1 +1,1 @@
-﻿export { default } from "./ImageOption";
+export { default } from "./ImageOption";

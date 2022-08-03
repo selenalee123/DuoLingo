@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import { View, Alert, ActivityIndicator } from "react-native";
 import styles from "./App.styles";
 import ImageMultipleChoiceQuestion from "./src/components/ImageMultipleChoiceQuestion/ImageMultipleChoiceQuestion";
+import OpenEndedQuestion from "./src/components/OpenEndedQuestion/OpenEndedQuestion";
 import Header from "./src/components/Header";
-import FillInTheBlank from "./src/components/FillInTheBlank";
-
 
 import questions from "./assets/data/allQuestions";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import FillInTheBlank from "./src/components/FillInTheBlank";
 
-export default function App() {
+const App = () => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [currentQuestion, setCurrentQuestion] = useState(
     questions[currentQuestionIndex]
@@ -37,7 +37,6 @@ export default function App() {
     }
   }, [lives, currentQuestionIndex, hasLoaded]);
 
-
   const onCorrect = () => {
     setCurrentQuestionIndex(currentQuestionIndex + 1);
   };
@@ -46,17 +45,17 @@ export default function App() {
     setLives(5);
     setCurrentQuestionIndex(0);
   };
+
   const onWrong = () => {
     if (lives <= 1) {
-      Alert.alert("Game over", "Try again",
-        [
-          {
-            text: "Try again",
-            onPress: restart,
-          },
-        ]);
+      Alert.alert("Game over", "Try again", [
+        {
+          text: "Try again",
+          onPress: restart,
+        },
+      ]);
     } else {
-      Alert.alert("on Wrong");
+      Alert.alert("Wroooong");
       setLives(lives - 1);
     }
   };
@@ -104,11 +103,11 @@ export default function App() {
       )}
 
       {currentQuestion.type === "IMAGE_MULTIPLE_CHOICE" && (
-      <ImageMultipleChoiceQuestion
-        question={currentQuestion}
-        onCorrect={onCorrect}
-        onWrong={onWrong}
-      />
+        <ImageMultipleChoiceQuestion
+          question={currentQuestion}
+          onCorrect={onCorrect}
+          onWrong={onWrong}
+        />
       )}
       {currentQuestion.type === "OPEN_ENDED" ? (
         <OpenEndedQuestion
@@ -119,4 +118,6 @@ export default function App() {
       ) : null}
     </View>
   );
-}
+};
+
+export default App;

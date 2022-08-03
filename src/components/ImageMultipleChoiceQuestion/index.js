@@ -1,1 +1,1 @@
-﻿export { default } from "./ImageMultipleChoiceQuestion";
+export { default } from "./ImageMultipleChoiceQuestion";

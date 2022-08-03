@@ -1,4 +1,4 @@
-﻿import React, { useState } from "react";
+import React, { useState } from "react";
 import { Text, View } from "react-native";
 import PropTypes from "prop-types";
 import ImageOption from "../ImageOption";
