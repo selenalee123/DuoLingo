@@ -22,15 +22,16 @@ const WordOption = ({ text, onPress, isSelected }) => {
 const styles = StyleSheet.create({
   root: {
     borderWidth: 2,
-    borderBottomWidth: 4,
+    borderBottomWidth: 6,
     borderColor: "lightgray",
     borderRadius: 5,
-
-    padding: 10,
+    padding: 20,
     paddingHorizontal: 15,
     margin: 10,
   },
-  text: {},
+  text: {
+    fontSize: 16
+  },
 });
 
 export default WordOption;

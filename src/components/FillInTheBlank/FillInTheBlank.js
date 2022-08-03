@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { View, Text } from "react-native";
+import React, {useState} from "react";
+import {View, Text} from "react-native";
 import Button from "../Button";
 import WordOption from "../WordOption";
 import styles from "./styles";
 
-const FillInTheBlank = ({ question, onCorrect, onWrong }) => {
+const FillInTheBlank = ({question, onCorrect, onWrong}) => {
   const [parts, setParts] = useState(question.parts);
 
   const onButtonPress = () => {
@@ -62,9 +62,9 @@ const FillInTheBlank = ({ question, onCorrect, onWrong }) => {
           if (part.isBlank) {
             return (
               <View style={styles.blank}>
-                {part.selected  && (
+                {part.selected && (
                   <WordOption
-                    key={index}
+                    key={part.text}
                     text={part.selected}
                     onPress={() => removeSelectedAt(index)}
                   />
@@ -78,9 +78,9 @@ const FillInTheBlank = ({ question, onCorrect, onWrong }) => {
       </View>
 
       <View style={styles.optionsContainer}>
-        {question.options.map((option,index) => (
+        {question.options.map((option, index) => (
           <WordOption
-          key={index}
+            key={option}
             text={option}
             isSelected={isSelected(option)}
             onPress={() => addOptionToSelected(option)}
