@@ -61,10 +61,9 @@ const FillInTheBlank = ({question, onCorrect, onWrong}) => {
         {parts.map((part, index) => {
           if (part.isBlank) {
             return (
-              <View style={styles.blank}>
+              <View style={styles.blank} key={part.id}>
                 {part.selected && (
                   <WordOption
-                    key={part.id}
                     text={part.selected}
                     onPress={() => removeSelectedAt(index)}
                   />
@@ -80,7 +79,7 @@ const FillInTheBlank = ({question, onCorrect, onWrong}) => {
       <View style={styles.optionsContainer}>
         {question.options.map((option, index) => (
           <WordOption
-            key={option.id}
+            key={option}
             text={option}
             isSelected={isSelected(option)}
             onPress={() => addOptionToSelected(option)}
