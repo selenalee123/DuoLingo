@@ -2,14 +2,14 @@ export default [
   {
     id: "q5",
     type: "OPEN_ENDED",
-    text: "Yo soy un hombre",
-    answer: "I am a man",
+    text: "¿Como estas",
+    answer: "How are you",
   },
   {
     id: "q5",
     type: "OPEN_ENDED",
-    text: "La mujer",
-    answer: "the woman",
+    text: "Adios ",
+    answer: "Bye",
   },
   {
     id: "q5",

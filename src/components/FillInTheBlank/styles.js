@@ -7,10 +7,14 @@ const styles = StyleSheet.create({
     alignSelf: "flex-start",
   },
   row: {
+    display: "flex",
     flexDirection: "row",
     alignSelf: "flex-start",
     marginVertical: 10,
-    height: 60,
+    flexShrink: 1,
+    flexWrap: 'wrap'
+    // width: 100,
+
   },
   text: {
     alignSelf: "flex-end",
@@ -18,8 +22,8 @@ const styles = StyleSheet.create({
   },
   blank: {
     borderBottomWidth: 2,
-    borderColor: "lightgray",
-    width: 100,
+    borderColor: "red",
+    flexShrink: 1,
   },
   optionsContainer: {
     flex: 1,

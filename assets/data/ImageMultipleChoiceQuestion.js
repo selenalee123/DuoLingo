@@ -25,7 +25,7 @@ export default [
       {
         id: "option4",
         image:
-          "https://fsmd-assets.s3.eu-west-1.amazonaws.com/duolingo/images/coffee.png",
+          "https://spng.subpng.com/20171220/tzq/cup-coffee-png-5a3a9a9cc89664.8901875815137901088216.jpg",
         text: "el café",
       },
     ],
@@ -36,7 +36,7 @@ export default [
       {
         id: "option4",
         image:
-          "https://fsmd-assets.s3.eu-west-1.amazonaws.com/duolingo/images/coffee.png",
+          "https://spng.subpng.com/20171220/tzq/cup-coffee-png-5a3a9a9cc89664.8901875815137901088216.jpg",
         text: "el café",
         correct: true,
       },
@@ -78,7 +78,7 @@ export default [
       {
         id: "option4",
         image:
-          "https://fsmd-assets.s3.eu-west-1.amazonaws.com/duolingo/images/coffee.png",
+          "https://spng.subpng.com/20171220/tzq/cup-coffee-png-5a3a9a9cc89664.8901875815137901088216.jpg",
         text: "el café",
       },
       {
@@ -115,7 +115,7 @@ export default [
       {
         id: "option4",
         image:
-          "https://fsmd-assets.s3.eu-west-1.amazonaws.com/duolingo/images/coffee.png",
+          "https://spng.subpng.com/20171220/tzq/cup-coffee-png-5a3a9a9cc89664.8901875815137901088216.jpg",
         text: "el café",
       },
     ],
