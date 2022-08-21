@@ -1,54 +1,27 @@
-import React, { useState } from "react";
-import { View, Text, TextInput, Image, KeyboardAvoidingView,Keyboard,
-  TouchableWithoutFeedback } from "react-native";
-import Button from "../Button";
-import styles from "./styles";
-import mascot from "../../../assets/images/mascot.png";
+// React Native Counter Example using Hooks!
 
-const OpenEndedQuestion = ({ question, onCorrect, onWrong }) => {
-  const [input, setInput] = useState("");
+import React, { useState } from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
 
-  const onButtonPress = () => {
-    if (question.answer.toLowerCase().trim() === input.toLowerCase().trim()) {
-      onCorrect();
-    } else {
-      onWrong();
-    }
-    setInput("");
-  };
+const App = () => {
+  const [count, setCount] = useState(0);
 
   return (
-    <>
-      <TouchableWithoutFeedback
-        onPress={Keyboard.dismiss}
-        accessible={false}
-        style={styles.fullContainer}
-      >
-        <KeyboardAvoidingView behavior="padding" style={styles.fullContainer}>
-      <Text style={styles.title}>Translate this sentence</Text>
-      <View style={styles.row}>
-        <Image source={mascot} style={styles.mascot} resizeMode="contain" />
-        <View style={styles.sentenceContainer}>
-          <Text style={styles.sentence}>{question.text}</Text>
-        </View>
-      </View>
-
-
-          <TextInput
-            value={input}
-            onChangeText={setInput}
-            placeholder="Type in English"
-            style={styles.textInput}
-            textAlignVertical="top"
-            multiline={true}
-          />
-
-      <Button text="Check" onPress={onButtonPress} disabled={!input} />
-      </KeyboardAvoidingView>
-      </TouchableWithoutFeedback>
-
-    </>
+    <View style={styles.container}>
+      <Text>You clicked {count} times</Text>
+      <Button
+        onPress={() => setCount(count + 1)}
+        title="Click me!"
+      />
+    </View>
   );
 };
 
-export default OpenEndedQuestion;
+// React Native Styles
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
+});
