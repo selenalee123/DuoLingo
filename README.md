@@ -1,4 +1,4 @@
 
 
 
-![.](assets/demo/mutliple choice.gif)
+![.](assets/demo/mutliple%choice.gif)
